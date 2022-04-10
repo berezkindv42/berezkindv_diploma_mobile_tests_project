@@ -1,0 +1,1 @@
+# berezkindv_diploma_mobile_tests_project
