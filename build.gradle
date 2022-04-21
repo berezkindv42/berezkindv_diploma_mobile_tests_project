@@ -71,19 +71,8 @@ tasks.withType(Test) {
     }
 }
 
-task local_tests(type: Test) {
+task mobile_tests(type: Test) {
     useJUnitPlatform {
-        includeTags 'local'
-    }
-}
-
-task browserstack_tests(type: Test) {
-    useJUnitPlatform {
-        includeTags 'browserstack'
-    }
-}
-task real_tests(type: Test) {
-    useJUnitPlatform {
-        includeTags 'real'
+        includeTags 'mobile'
     }
 }
