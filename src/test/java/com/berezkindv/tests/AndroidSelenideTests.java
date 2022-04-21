@@ -72,7 +72,7 @@ public class AndroidSelenideTests extends TestBase {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/view_announcement_action_negative")).click();
         });
-        step("GO to feed customize menu", () -> {
+        step("Go to feed customize menu", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/nav_more_container")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/main_drawer_settings_container")).click();
             $$(AppiumBy.id("android:id/title")).findBy(text("Explore Feed")).click();
@@ -95,7 +95,7 @@ public class AndroidSelenideTests extends TestBase {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/view_announcement_action_negative")).click();
         });
-        step("GO to language menu", () -> {
+        step("Go to language menu", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/nav_more_container")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/main_drawer_settings_container")).click();
             $$(AppiumBy.id("android:id/title")).findBy(text("Wikipedia languages")).click();
