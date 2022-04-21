@@ -1,1 +1,1 @@
-# berezkindv_diploma_mobile_tests_project
+# berezkindv_diploma_mobile_tests_project WORK IN PROGRESS
