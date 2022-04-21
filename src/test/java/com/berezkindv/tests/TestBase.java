@@ -44,7 +44,7 @@ public class TestBase {
     public void startDriver() {
         open();
 
-        Attach.attachAsText("Устройство запуска", deviceHost);
+        Attach.attachAsText("Устройство запуска: ", deviceHost);
     }
 
     @AfterEach

@@ -12,7 +12,7 @@ import static io.qameta.allure.Allure.step;
 public class AndroidSelenideTests extends TestBase {
 
     @Test
-    @Tag("local")
+    @Tag("mobile")
     void searchTest() {
         step("Skip onboarding page", () -> back());
 
@@ -26,7 +26,7 @@ public class AndroidSelenideTests extends TestBase {
     }
 
     @Test
-    @Tag("local")
+    @Tag("mobile")
     void onBoardingPagesTest() {
         step("First onboarding page", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
@@ -51,7 +51,7 @@ public class AndroidSelenideTests extends TestBase {
     }
 
     @Test
-    @Tag("local")
+    @Tag("mobile")
     void customizeFeedMenuTest() {
         step("Skip onboarding page", () -> back());
 
@@ -66,7 +66,7 @@ public class AndroidSelenideTests extends TestBase {
     }
 
     @Test
-    @Tag("local")
+    @Tag("mobile")
     void customizeFeedHideAllOptionsTest() {
         step("Skip onboarding pages", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
@@ -89,7 +89,7 @@ public class AndroidSelenideTests extends TestBase {
     }
 
     @Test
-    @Tag("local")
+    @Tag("mobile")
     void changeLanguageTest() {
         step("Skip onboarding pages", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
@@ -112,7 +112,7 @@ public class AndroidSelenideTests extends TestBase {
     }
 
     @Test
-    @Tag("local")
+    @Tag("mobile")
     void mainMenuTest() {
         step("Skip onboarding pages", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
