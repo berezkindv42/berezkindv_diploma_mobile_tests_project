@@ -1,0 +1,38 @@
+
+// все параметры обязательны
+// для локального запуска в эту папку нужно положить .jar файл скачанный отсюда:
+// https://github.com/qa-guru/allure-notifications/releases/download/3.1.2/allure-notifications-3.1.2.jar
+
+----------> Локальный отчет в Телеграм
+java  \
+"-DprojectName=Local run" \
+"-Denv=https://qa.guru" \
+"-DreportLink=https://no.link/" \
+"-Dcomm=Any comment here" \
+"-Dconfig.file=./notifications/telegram_config.json" \
+-jar ./notifications/allure-notifications-3.1.2.jar // при наличии .jar в папке notifications
+
+----------> Удаленный отчет в Телеграм
+java  \
+"-DprojectName=${PROJECT_NAME}" \ // автоматическая переменная jenkins'а
+"-Denv=${ENVIRONMENT}" \ // переменная задается вручную
+"-DreportLink=${BUILD_URL}" \ // автоматическая переменная jenkins'а
+"-Dcomm=${COMMENT}" \ // переменная задается вручную
+"-Dconfig.file=./notifications/telegram_config.json" \
+-jar ./notifications/allure-notifications-3.1.2.jar
+
+----------> Удаленный отчет в Телеграм без .jar библиотеки в репозитории
+java  \
+"-DprojectName=${PROJECT_NAME}" \
+"-Denv=${ENVIRONMENT}" \
+"-DreportLink=${BUILD_URL}" \
+"-Dcomm=${COMMENT}" \
+"-Dconfig.file=./notifications/telegram_config.json" \
+-jar ../allure-notifications-3.1.2.jar
+
+----------> Загрузка библиотеки .jar в корень jenkins'а
+cd ..
+FILE=./allure-notifications-3.1.2.jar
+if [ ! -f "$FILE" ]; then
+   wget https://github.com/qa-guru/allure-notifications/releases/download/3.1.2/allure-notifications-3.1.2.jar
+fi
