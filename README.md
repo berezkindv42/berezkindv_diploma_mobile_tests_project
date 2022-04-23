@@ -1,4 +1,4 @@
-# Дипломный проект по тестированию мобильного приложения Wikipedia для Android
+# Дипломный проект по автоматическому тестированию мобильного приложения Wikipedia для Android
 ### <a target="_blank" href="https://https://ru.wikipedia.org">Wikipedia</a>
 
 ### <a target="_blank" href="https://https://github.com/wikimedia/apps-android-wikipedia">Wikipedia mobile app</a>
