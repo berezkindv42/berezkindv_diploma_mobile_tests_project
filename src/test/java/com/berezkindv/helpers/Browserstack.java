@@ -1,6 +1,6 @@
 package com.berezkindv.helpers;
 
-import com.berezkindv.config.CredentialsConfig;
+import com.berezkindv.config.BrowserstackConfig;
 import org.aeonbits.owner.ConfigFactory;
 
 import static io.restassured.RestAssured.given;
@@ -9,7 +9,7 @@ import static java.lang.String.format;
 public class Browserstack {
 
     public static String videoUrl(String sessionId) {
-        CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
+        BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class);
         String url = format("https://api-cloud.browserstack.com/app-automate/sessions/%s.json", sessionId);
 
         return given()

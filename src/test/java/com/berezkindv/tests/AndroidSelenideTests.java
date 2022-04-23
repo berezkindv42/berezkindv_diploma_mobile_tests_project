@@ -90,7 +90,7 @@ public class AndroidSelenideTests extends TestBase {
 
     @Test
     @Tag("mobile")
-    void changeLanguageTest() {
+    void addLanguageTest() {
         step("Skip onboarding pages", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/view_announcement_action_negative")).click();

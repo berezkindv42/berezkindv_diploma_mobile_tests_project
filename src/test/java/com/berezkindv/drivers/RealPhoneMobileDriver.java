@@ -1,9 +1,11 @@
 package com.berezkindv.drivers;
 
+import com.berezkindv.config.RealDeviceConfig;
 import com.codeborne.selenide.WebDriverProvider;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 
@@ -20,6 +22,8 @@ import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 @ParametersAreNonnullByDefault
 public class RealPhoneMobileDriver implements WebDriverProvider {
+    RealDeviceConfig config = ConfigFactory.create(RealDeviceConfig.class);
+
     @Override
     @CheckReturnValue
     @Nonnull
@@ -29,18 +33,18 @@ public class RealPhoneMobileDriver implements WebDriverProvider {
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
-        options.setPlatformName("Android");
-        options.setUdid("R58M61XZVRJ");
-        options.setDeviceName("R58M61XZVRJ");
-        options.setPlatformVersion("11.0");
+        options.setPlatformName(config.platformName());
+        options.setUdid(config.udid());
+        options.setDeviceName(config.deviceName());
+        options.setPlatformVersion(config.osVersion());
         options.setApp(app.getAbsolutePath());
         options.setLocale("en");
         options.setLanguage("en");
-        options.setAppPackage("org.wikipedia.alpha");
-        options.setAppActivity("org.wikipedia.main.MainActivity");
+        options.setAppPackage(config.appPackage());
+        options.setAppActivity(config.appActivity());
 
         try {
-            return new AndroidDriver(new URL("http://localhost:4723/wd/hub"), options);
+            return new AndroidDriver(new URL(config.localUrl()), options);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

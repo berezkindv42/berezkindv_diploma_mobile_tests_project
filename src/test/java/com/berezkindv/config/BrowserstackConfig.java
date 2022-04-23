@@ -5,10 +5,9 @@ import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "system:properties",
-        "classpath:config/credentials.properties"
+        "classpath:config/browserstack.properties"
 })
-public interface CredentialsConfig extends Config {
-
+public interface BrowserstackConfig extends Config {
     @Key("browserstack.login")
     String browserstackLogin();
 
@@ -17,4 +16,10 @@ public interface CredentialsConfig extends Config {
 
     @Key("browserstack.app.key")
     String browserstackAppKey();
+
+    @Key("device.name")
+    String deviceName();
+
+    @Key("os.version")
+    String osVersion();
 }

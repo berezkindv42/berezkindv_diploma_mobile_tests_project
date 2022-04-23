@@ -1,7 +1,7 @@
 package com.berezkindv.drivers;
 
+import com.berezkindv.config.BrowserstackConfig;
 import com.codeborne.selenide.WebDriverProvider;
-import com.berezkindv.config.CredentialsConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
@@ -12,8 +12,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BrowserstackMobileDriver implements WebDriverProvider {
-
-    CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
+    BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class);
 
     public static URL getBrowserstackUrl() {
         try {
@@ -31,8 +30,8 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("browserstack.user", config.browserstackLogin());
         mutableCapabilities.setCapability("browserstack.key", config.browserstackPassword());
         mutableCapabilities.setCapability("app", config.browserstackAppKey());
-        mutableCapabilities.setCapability("device", "Google Pixel 3");
-        mutableCapabilities.setCapability("os_version", "9.0");
+        mutableCapabilities.setCapability("device", config.deviceName());
+        mutableCapabilities.setCapability("os_version", config.osVersion());
         mutableCapabilities.setCapability("project", "First Java Project");
         mutableCapabilities.setCapability("build", "browserstack-build-1");
         mutableCapabilities.setCapability("name", "first_test");
