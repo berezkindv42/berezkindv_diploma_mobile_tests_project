@@ -14,24 +14,18 @@ public class AndroidSelenideTests extends TestBase {
 
     @Test
     @Tag("mobile")
-    void testTest() {
-        assertTrue(true);
+    void searchTest() {
+        step("Skip onboarding page", () -> back());
+
+        step("Type search", () -> {
+            $(AppiumBy.accessibilityId("Search Wikipedia")).click();
+            $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("wikipedia");
+        });
+        step("Verify content found", () ->
+                $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
+                        .shouldHave(sizeGreaterThan(0)));
     }
 
-//    @Test
-//    @Tag("mobile")
-//    void searchTest() {
-//        step("Skip onboarding page", () -> back());
-//
-//        step("Type search", () -> {
-//            $(AppiumBy.accessibilityId("Search Wikipedia")).click();
-//            $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("wikipedia");
-//        });
-//        step("Verify content found", () ->
-//                $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
-//                        .shouldHave(sizeGreaterThan(0)));
-//    }
-//
 //    @Test
 //    @Tag("mobile")
 //    void onBoardingPagesTest() {
