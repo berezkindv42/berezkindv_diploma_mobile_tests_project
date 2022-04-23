@@ -17,17 +17,21 @@
 ## :rocket: Технологии и инструменты
 
 <p align="center">
-<a href="https://www.jetbrains.com/idea/"><img src="images/logos/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a>
 <a href="https://www.java.com/"><img src="images/logos/Java.svg" width="50" height="50"  alt="Java"/></a>
+<a href="https://www.jetbrains.com/idea/"><img src="images/logos/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a>
 <a href="https://github.com/"><img src="images/logos/Github.svg" width="50" height="50"  alt="Github"/></a>
 <a href="https://junit.org/junit5/"><img src="images/logos/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a>
 <a href="https://gradle.org/"><img src="images/logos/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
 <a href="https://selenide.org/"><img src="images/logos/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>
-<a href="https://aerokube.com/selenoid/"><img src="images/logos/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
-<a href="https://aerokube.com/selenoid/"><img src="images/logos/Docker.svg" width="50" height="50"  alt="Selenoid"/></a>
 <a href="https://github.com/allure-framework/allure2"><img src="images/logos/Allure_Report.svg" width="50" height="50"  alt="Allure"/></a>
+<a href="https://www.browserstack.com/"><img src="images/logos/Browserstack.svg" width="50" height="50"  alt="Jenkins"/></a>
+<a href="https://appium.io/"><img src="images/logos/Appium.svg" width="50" height="50"  alt="Jenkins"/></a>
+<a href="https://developer.android.com/studio"><img src="images/logos/Android-studio.svg" width="50" height="50"  alt="Jenkins"/></a>
 <a href="https://www.jenkins.io/"><img src="images/logos/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
-<a href="https://www.jenkins.io/"><img src="images/logos/Allure_EE.svg" width="50" height="50"  alt="Jenkins"/></a>
+<a href="https://qameta.io/"><img src="images/logos/Allure_EE.svg" width="50" height="50"  alt="Allure TestOps"/></a>
+
+[//]: # (<a href="https://aerokube.com/selenoid/"><img src="images/logos/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>)
+[//]: # (<a href="https://www.docker.com/"><img src="images/logos/Docker.svg" width="50" height="50"  alt="Docker"/></a>)
 </p>
 
 ## :scroll: Тест кейсы
@@ -55,7 +59,7 @@ task в данном случае один - mobile_tests \
 Gradle clean mobile_tests -DdeviceHost=browserstack
 ```
 
-Удаленный запуск:
+Запуск в Jenkins производится со следующими параметрами:
 ```bash
 clean
 ${TASK}
