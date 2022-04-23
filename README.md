@@ -7,8 +7,8 @@
 
 - [Технологии и инструменты](#rocket-технологии-и-инструменты)
 - [Тест кейсы](#scroll-тест-кейсы)
+- [Запуск тестов из терминала](#computer-запуск-тестов)
 - [Сборка в Jenkins](#jenkins-job)
-- [Запуск из терминала](#computer-запуск-тестов-из-терминала)
 - [Allure отчет](#отчет-в-allure-report)
 - [Интеграция с Allure TestOps](#интеграция-с-allure-testops)
 - [Отчет в Telegram](#уведомление-в-telegram-при-помощи-бота)
@@ -59,13 +59,7 @@ Gradle clean mobile_tests -DdeviceHost=browserstack
 ```bash
 clean
 ${TASK}
--Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
--DbrowserMobileView="${BROWSER_MOBILE}"
--DremoteDriverUrl=https://${LOGIN}:${PASSWORD}@${REMOTE_DRIVER_URL}/wd/hub/
--DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
--Dthreads=${THREADS}
+-DdeviceHost=${DEVICEHOST}
 ```
 
 
