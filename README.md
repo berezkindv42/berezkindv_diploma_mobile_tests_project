@@ -3,7 +3,7 @@
 
 ### <a target="_blank" href="https://https://github.com/wikimedia/apps-android-wikipedia">Wikipedia mobile app</a>
 
-## :pushpin: Содержание:
+## <img src="images/logos/Android Logo.svg" width="50" height="50"  alt="Jenkins"/></a>Содержание:
 
 - [Технологии и инструменты](#rocket-технологии-и-инструменты)
 - [Тест кейсы](#scroll-тест-кейсы)
@@ -116,10 +116,10 @@ ${TASK}
 <img title="Allure TestOps Dashboard" src="images/screenshots/testops_dashboard.png">
 </p>
 
-### Тест-кейсы (добавляем ручные тесты)
+### Тест-кейсы
 
 <p align="center">
-<img title="Allure TestOps Tests" src="images/screenshots/testops_added_manual_tests.jpg">
+<img title="Allure TestOps Tests" src="images/screenshots/testops_tests.png">
 </p>
 
 ## <img src="images/logos/Telegram.svg" width="25" height="25"  alt="Allure"/></a>Уведомление в Telegram при помощи бота
