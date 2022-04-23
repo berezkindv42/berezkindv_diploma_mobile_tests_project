@@ -145,7 +145,6 @@ ${TASK}
 <p align="center">
 <img title="BrowserStack Video" src="images/screenshots/video_onboarding.gif" width="250" height="250"  alt="video">
 <img title="BrowserStack Video" src="images/screenshots/video_add_language.gif" width="250" height="250"  alt="video">
-<img title="BrowserStack Video" src="images/screenshots/video_custom_feed.gif" width="250" height="250"  alt="video">
 <img title="BrowserStack Video" src="images/screenshots/video_starch.gif" width="250" height="250"  alt="video">
 </p>
 
