@@ -1,7 +1,7 @@
 # Дипломный проект по тестированию мобильного приложения Wikipedia для Android
-<a target="_blank" href="https://https://ru.wikipedia.org">Wikipedia</a>
+### <a target="_blank" href="https://https://ru.wikipedia.org">Wikipedia</a>
 
-<a target="_blank" href="https://https://github.com/wikimedia/apps-android-wikipedia">Wikipedia mobile app</a>
+### <a target="_blank" href="https://https://github.com/wikimedia/apps-android-wikipedia">Wikipedia mobile app</a>
 
 ## :pushpin: Содержание:
 
@@ -45,57 +45,48 @@
 
 ## :computer: Запуск тестов
 
-Локальный запуск: \
+### Локальный запуск:
 Паттерн запуска из терминала выглядит следующим образом: \
-Gradle clean task -DdeviceHost=deviceHost \
+```gradle clean task -DdeviceHost=deviceHost``` \
 task в данном случае один - mobile_tests \
 ключ deviceHost определяет на какой площадке будут запущены тесты
-- browserstack - тесты будут запущены на платформе <a target="_blank" href="hhttps://www.browserstack.com/">BrowserStack</a>
-- emulator - тесты будут запущены на локально развернутом эмуляторе <a target="_blank" href="https://developer.android.com/studio">Android Studio</a>
-- real - тесты будут запущены на реальном девайсе
+- ```browserstack``` - тесты будут запущены на платформе <a target="_blank" href="hhttps://www.browserstack.com/">BrowserStack</a>
+- ```emulator``` - тесты будут запущены на локально развернутом эмуляторе <a target="_blank" href="https://developer.android.com/studio">Android Studio</a>
+- ```real``` - тесты будут запущены на реальном девайсе
 
 Промер:
 ```bash
 Gradle clean mobile_tests -DdeviceHost=browserstack
 ```
 
-Запуск в Jenkins производится со следующими параметрами:
+Запуск сборки в Jenkins производится со следующими параметрами:
 ```bash
 clean
 ${TASK}
 -DdeviceHost=${DEVICEHOST}
 ```
 
+### Параметры сборки в Jenkins:
+
+- ```DEVICEHOST``` - Выбор платформы запуска (по умолчанию ```browserstack```)
+- ```BRANCH``` - выбор ветки репозитория GitHub (по умолчанию ```main```)
+- ```TASK``` - выбор задачи (настройка build.gradle, по умолчанию ```mobile_tests```)
 
 ## <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a>Jenkins job
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_diploma_ui_tests_project/">Сборка в Jenkins</a>
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_diploma_mobile_tests_project/">Сборка в Jenkins</a>
 
-Для запуска сборки нужно нажат кнопку "Собрать с параметрами":
+Инструкция по запуску сборки в Jenkins:
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/berezkindv_diploma_ui_tests_project/"><img src="images/screenshots/jenkins_job_run.jpg" alt="Jenkins"/></a>
-</p>
-
-Далее следует выбрать параметры сборки:
-<p align="center">
-<a href="https://jenkins.autotests.cloud/job/berezkindv_diploma_ui_tests_project/"><img src="images/screenshots/jenkins_job_parameters.jpg" alt="Jenkins"/></a>
+<a><img src="images/screenshots/jenkins_job_parameters.png" alt="Jenkins"/></a>
 </p>
 
 По завершении сборки можно посмотреть Allure отчет или перейти к Allure TestOps:
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/berezkindv_diploma_ui_tests_project/"><img src="images/screenshots/jenkins_job_notifications.jpg" alt="Jenkins"/></a>
+<a><img src="images/screenshots/jenkins_job_notifications.png" alt="Jenkins"/></a>
 </p>
 
 
 
-### Параметры сборки в Jenkins:
-
-- browser (браузер, по умолчанию chrome)
-- browserVersion (версия браузера, по умолчанию 100.0)
-- browserSize (размер окна браузера, по умолчанию 1920x1080)
-- browserMobileView (отображение мобильной версии, для примера iPhone X)
-- remoteDriverUrl (логин, пароль и адрес удаленного сервера selenoid)
-- videoStorage (адрес, по которому можно получить видео)
-- threads (количество потоков)
 
 ## <img src="images/logos/Allure_Report.svg" width="25" height="25"  alt="Allure"/></a>Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_diploma_ui_tests_project/10/allure/">Allure report</a>
 
@@ -139,8 +130,11 @@ ${TASK}
 
 
 
-### <img src="images/logos/Selenoid.svg" width="25" height="25"  alt="Allure"/></a>Примеры видео о прохождении тестов
+### <img src="images/logos/Browserstack.svg" width="25" height="25"  alt="Allure"/></a>Примеры видео о прохождении тестов
 
 <p align="center">
-<img title="Selenoid Video" src="images/screenshots/video_logintest.gif" width="250" height="153"  alt="video"> <img title="Selenoid Video" src="images/screenshots/video_sendmailtest.gif" width="250" height="153"  alt="video">
+<img title="BrowserStack Video" src="images/screenshots/video_onboarding.gif" width="250" height="250"  alt="video">
+<img title="BrowserStack Video" src="images/screenshots/video_add_language.gif" width="250" height="250"  alt="video">
+<img title="BrowserStack Video" src="images/screenshots/video_custom_feed.gif" width="250" height="250"  alt="video">
+<img title="BrowserStack Video" src="images/screenshots/video_starch.gif" width="250" height="250"  alt="video">
 </p>
