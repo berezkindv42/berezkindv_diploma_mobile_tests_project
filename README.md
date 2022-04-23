@@ -3,7 +3,8 @@
 
 ### <a target="_blank" href="https://https://github.com/wikimedia/apps-android-wikipedia">Wikipedia mobile app</a>
 
-## <img src="images/logos/Android Logo.svg" width="50" height="50"  alt="Jenkins"/></a>Содержание
+[//]: # (## <img src="images/logos/Android Logo.svg" width="50" height="50"  alt="Jenkins"/></a>Содержание)
+## :robot: Содержание
 
 - [Технологии и инструменты](#rocket-технологии-и-инструменты)
 - [Тест кейсы](#scroll-тест-кейсы)
