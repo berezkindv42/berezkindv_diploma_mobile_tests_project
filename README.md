@@ -44,7 +44,8 @@
 - ✓ Тест добавления русского языка.
 - ✓ Тест пунктов основного меню.
 
-[К содержанию](#Содержание)
+
+- [К содержанию](#Содержание)
 
 ## :computer: Параметры запуска тестов
 
@@ -75,7 +76,8 @@ ${TASK}
 - ```BRANCH``` - выбор ветки репозитория GitHub (по умолчанию ```main```)
 - ```TASK``` - выбор задачи (настройка build.gradle, по умолчанию ```mobile_tests```)
 
-[К содержанию](#cодержание)
+
+- [К содержанию](#cодержание)
 
 ## <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a>Сборка в Jenkins
 ### <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_diploma_mobile_tests_project/">Jenkins</a>
@@ -90,7 +92,7 @@ ${TASK}
 <a><img src="images/screenshots/jenkins_job_notifications.png" alt="Jenkins"/></a>
 </p>
 
-[К содержанию](#cодержание)
+- [К содержанию](#cодержание)
 
 ## <img src="images/logos/Allure_Report.svg" width="25" height="25"  alt="Allure"/></a>Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_diploma_ui_tests_project/10/allure/">Allure report</a>
 
@@ -112,7 +114,7 @@ ${TASK}
 <img title="Allure Graphics" src="images/screenshots/allure_report_graphs.png">
 </p>
 
-[К содержанию](#cодержание)
+- [К содержанию](#cодержание)
 
 ## <img src="images/logos/Allure_EE.svg" width="25" height="25"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/12018">Allure TestOps</a>
 
@@ -128,7 +130,7 @@ ${TASK}
 <img title="Allure TestOps Tests" src="images/screenshots/testops_tests.png">
 </p>
 
-[К содержанию](#cодержание)
+- [К содержанию](#cодержание)
 
 ## <img src="images/logos/Telegram.svg" width="25" height="25"  alt="Allure"/></a>Уведомление в Telegram при помощи бота
 По завершении всех операций телеграм бот отправит отчет со статистикой:
@@ -136,7 +138,7 @@ ${TASK}
 <img title="Allure Overview Dashboard" src="images/screenshots/telegram_bot.png">
 </p>
 
-[К содержанию](#cодержание)
+- [К содержанию](#cодержание)
 
 
 
@@ -148,4 +150,4 @@ ${TASK}
 <img title="BrowserStack Video" src="images/screenshots/video_starch.gif" width="250" height="250"  alt="video">
 </p>
 
-[К содержанию](#cодержание)
+- [К содержанию](#cодержание)
