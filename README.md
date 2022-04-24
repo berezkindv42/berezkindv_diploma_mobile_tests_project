@@ -70,6 +70,11 @@ ${TASK}
 -DdeviceHost=${DEVICEHOST}
 ```
 
+[К содержанию](#robot-содержание)
+
+## <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a>Сборка в Jenkins
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_diploma_mobile_tests_project/">Jenkins</a>
+
 ### Параметры сборки в Jenkins:
 
 - ```DEVICEHOST``` - Выбор платформы запуска (по умолчанию ```browserstack```)
@@ -77,10 +82,6 @@ ${TASK}
 - ```TASK``` - выбор задачи (настройка build.gradle, по умолчанию ```mobile_tests```)
 
 
-[К содержанию](#robot-содержание)
-
-## <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a>Сборка в Jenkins
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_diploma_mobile_tests_project/">Jenkins</a>
 
 Инструкция по запуску сборки в Jenkins:
 <p align="center">
@@ -96,19 +97,29 @@ ${TASK}
 
 ## <img src="images/logos/Allure_Report.svg" width="25" height="25"  alt="Allure"/></a>Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_diploma_ui_tests_project/10/allure/">Allure report</a>
 
-### Основное окно
+По завершении сборки можно обратиться к Allure отчету. \
+В который входит:
+- Протоколирование степов
+- Графики прохождения тестов
+- Таймлайн
+- Различная сортировка тестов по статусу
+- И многое другое
+
+Также к каждому тесту прилагаются аттачменты содержащие скриншоты, xml с деревом документа, видео прохождения теста.
+
+#### Основное окно
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure_report_dashboard.png">
 </p>
 
-### Тесты
+#### Тесты
 
 <p align="center">
 <img title="Allure Tests" src="images/screenshots/allure_report_tests.png">
 </p>
 
-### Графики
+#### Графики
 
 <p align="center">
 <img title="Allure Graphics" src="images/screenshots/allure_report_graphs.png">
@@ -118,13 +129,15 @@ ${TASK}
 
 ## <img src="images/logos/Allure_EE.svg" width="25" height="25"  alt="Allure"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/12018">Allure TestOps</a>
 
-### Дашборд
+Так же можно обратиться к Allure TestOps для дальнейшей автоматизации проекта.
+
+#### Дэшборд
 
 <p align="center">
 <img title="Allure TestOps Dashboard" src="images/screenshots/testops_dashboard.png">
 </p>
 
-### Тест-кейсы
+#### Тест-кейсы
 
 <p align="center">
 <img title="Allure TestOps Tests" src="images/screenshots/testops_tests.png">
