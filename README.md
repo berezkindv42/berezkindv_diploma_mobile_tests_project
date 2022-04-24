@@ -52,8 +52,8 @@
 ### Локальный запуск:
 Паттерн запуска из терминала выглядит следующим образом: \
 ```gradle clean task -DdeviceHost=deviceHost``` \
-task в данном случае один - mobile_tests \
-ключ deviceHost определяет на какой площадке будут запущены тесты
+```task``` в данном случае один - mobile_tests \
+ключ ```deviceHost``` определяет на какой площадке будут запущены тесты
 - ```browserstack``` - тесты будут запущены на платформе <a target="_blank" href="hhttps://www.browserstack.com/">BrowserStack</a>
 - ```emulator``` - тесты будут запущены на локально развернутом эмуляторе <a target="_blank" href="https://developer.android.com/studio">Android Studio</a>
 - ```real``` - тесты будут запущены на реальном девайсе
@@ -63,32 +63,32 @@ task в данном случае один - mobile_tests \
 Gradle clean mobile_tests -DdeviceHost=browserstack
 ```
 
+[К содержанию](#robot-содержание)
+
+## <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a>Сборка в Jenkins
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_diploma_mobile_tests_project/">Jenkins</a>
+
+#### Параметры сборки в Jenkins:
+
 Запуск сборки в Jenkins производится со следующими параметрами:
+
 ```bash
 clean
 ${TASK}
 -DdeviceHost=${DEVICEHOST}
 ```
 
-[К содержанию](#robot-содержание)
-
-## <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a>Сборка в Jenkins
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/berezkindv_diploma_mobile_tests_project/">Jenkins</a>
-
-### Параметры сборки в Jenkins:
+#### Инструкция по запуску сборки в Jenkins:
+<p align="center">
+<a><img src="images/screenshots/jenkins_job_parameters.png" alt="Jenkins"/></a>
+</p>
 
 - ```DEVICEHOST``` - Выбор платформы запуска (по умолчанию ```browserstack```)
 - ```BRANCH``` - выбор ветки репозитория GitHub (по умолчанию ```main```)
 - ```TASK``` - выбор задачи (настройка build.gradle, по умолчанию ```mobile_tests```)
 
 
-
-Инструкция по запуску сборки в Jenkins:
-<p align="center">
-<a><img src="images/screenshots/jenkins_job_parameters.png" alt="Jenkins"/></a>
-</p>
-
-По завершении сборки можно посмотреть Allure отчет или перейти к Allure TestOps:
+#### По завершении сборки можно посмотреть Allure отчет или перейти к Allure TestOps:
 <p align="center">
 <a><img src="images/screenshots/jenkins_job_notifications.png" alt="Jenkins"/></a>
 </p>
